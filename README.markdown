@@ -4,7 +4,10 @@ dotjs  is a  Google Chrome  extension  that executes
 JavaScript files in `~/.js` based on their filename.
 
 If  you navigate to  `http://www.google.com/`, dotjs
-will execute `~/.js/google.com.js`.
+will execute `~/.js/com.js`, `~/.js/google.com.js`
+and `~/.js/www.google.com.js`, in order, if they
+exist.
+
 
 This makes it super  easy to spruce up your favorite
 pages using JavaScript.
