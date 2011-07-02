@@ -15,10 +15,10 @@ require 'webrick'
 
 dotjs = Class.new(WEBrick::HTTPServlet::AbstractServlet) do
   def do_GET(request, response)
-    body = ''
     parts = request.path.gsub('/','').split('.')
     subdomains = parts.length.times.collect {|i| parts[i..-1].join('.')}
 
+    body = "// dotjs is working! //\n"
     files = subdomains.reverse.drop(1).insert(0, "default.js")
     files.each {|file| body << File.read(file) + "\n" if File.exists?(file)}
 
